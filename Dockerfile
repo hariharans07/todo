@@ -1,6 +1,6 @@
 from node : 23
-Workdir /app
-Copy . .
-Run npm install
-Expose 3000
-Cmd ["npm","start"]
+workdir /app
+copy . .
+run npm install
+expose 3000
+cmd ["npm","start"]
