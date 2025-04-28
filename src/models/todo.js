@@ -70,15 +70,8 @@ async function signup(username, password) {
             password
         });
         
-        return {
-            _id: auth._id,
-            username: auth.username,
-            createdAt: auth.createdAt
-        };
+        return auth;
     } catch (error) {
-        if (error.code === 11000) {
-            throw new Error('Username already exists');
-        }
         throw error;
     }
 }
